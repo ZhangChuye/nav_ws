@@ -137,6 +137,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(odom_pub src/odom_pub.cpp)
+add_executable(laser_pub src/laser_pub.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,6 +151,10 @@ add_executable(odom_pub src/odom_pub.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(odom_pub
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(laser_pub
   ${catkin_LIBRARIES}
 )
 
