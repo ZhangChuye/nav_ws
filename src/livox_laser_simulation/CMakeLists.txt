@@ -32,13 +32,13 @@ catkin_package(
         CATKIN_DEPENDS tf
 )
 
-add_executable(stack src/store_points.cpp)
+# add_executable(stack src/store_points.cpp)
 
 add_library(livox_laser_simulation SHARED src/livox_points_plugin.cpp src/livox_ode_multiray_shape.cpp)
 target_link_libraries(livox_laser_simulation ${catkin_LIBRARIES} RayPlugin)
 
 target_link_libraries(livox_laser_simulation libprotobuf.so.9)
 
-target_link_libraries(stack
-  ${catkin_LIBRARIES}
-)
+# target_link_libraries(stack
+#   ${catkin_LIBRARIES}
+# )
