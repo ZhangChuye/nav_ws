@@ -138,6 +138,8 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(odom_pub src/odom_pub.cpp)
 add_executable(laser_pub src/laser_pub.cpp)
+add_executable(pcl_pub src/pcl_pub.cpp)
+add_executable(imu_data src/imu_data.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -158,6 +160,13 @@ target_link_libraries(laser_pub
   ${catkin_LIBRARIES}
 )
 
+target_link_libraries(pcl_pub
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(imu_data
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
